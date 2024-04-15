@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Messages</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.png">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black; /* Set background of the body to black */
+            color: white; /* Set text color to white */
+        }
+
+        .container {
+            width: 90%;
+            height: 60vh;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .inputBox {
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .inputBox input[type="text"],
+        .inputBox input[type="email"],
+        .inputBox input[type="tel"] {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 0px 10px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .inputBox textarea {
+            width: 100%;
+            height: 120px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 0px 10px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .inputBox button {
+            width: 100%;
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            background: rgb(0, 119, 255);
+            color: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .inputBox button:hover {
+            background: rgb(0, 17, 255);
+            transition: all 0.3s ease;
+        }
+
+        ::placeholder {
+            font-size: 16px;
+        }
+
+        .alert {
+            width: 100%;
+            background: rgb(0, 255, 106);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 900;
+            display: none;
+        }
+
+        /* Add your animation styles here */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 5;
+            }
+        }
+
+        .admission-header {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .contact-note {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2.5s ease-in-out;
+            background-color: black; /* Set background to black */
+            color: white; /* Set text color to white */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="text-align: left;">
+        <a href="index.html" onclick="return confirmNavigation()" style="position: fixed; top: 0; left: 0; display: block; width: 100%; background-color: blue; color: #FFF; font-size: 24px; font-weight: bold; padding: 10px; border-radius: 0 0 10px 10px; cursor: pointer; margin-bottom: 20px; text-decoration: none;">&#8592;</a>
+        <div class="admission-header">
+            <h1>Admission Form for Brain Train Institute</h1>
+        </div>
+        <BR>
+        <form action="" id="contactForm">
+            <div class="alert">Your admission message sent</div>
+
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Your name" />
+                <span class="inputError" id="nameError"></span> <!-- Add an error message span -->
+            </div>
+
+            <div class="inputBox">
+                <input type="email" id="emailid" placeholder="Your Email" />
+            </div>
+
+            <div class="inputBox">
+                <label for="phone"></label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required />
+                <span class="inputError" id="phoneError"></span> <!-- Add an error message span -->
+            </div>
+            
+
+            <div class="inputBox">
+                <textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <div class="contact-note">
+            <p>Note: We will contact you soon!!</p>
+        </div>
+    </div>
+
+    <script>
+        function confirmNavigation() {
+            // Directly navigate to the specified URL without confirmation
+            window.location.href = 'index.html'; // Replace 'index.html' with the actual file or URL you want to navigate to
+            return false; // Prevent the default behavior of the anchor link
+        }
+    </script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
+</body>
+
+</html>

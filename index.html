@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain Train</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <DIV class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Brain Train" width="80">
+        </DIV>
+
+        <div class="info-content">
+          <h1 class="name" title="Brain Train" style="font-size: medium;">Brain Train Institute</h1>
+
+          <p class="title">Kapan,Kathmandu</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+  
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">braintrainmontessori@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+977 9813096253</a>
+            </div>
+
+          </li>
+
+
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Budhanilkantha - 12,Kapan,Kathmandu</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/profile.php?id=61558577035677" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/profile.php?id=61558577035677" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/profile.php?id=61558577035677" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Home</button>
+          </li>
+          <div style="width: 0px; height: 100%; background-color: grey; margin: 0 auto;"></div>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Location</button>
+          </li>
+          <div style="width: 0px; height: 100%; background-color: grey; margin: 0 auto;"></div>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Notice</button>
+          </li>
+          <div style="width: 0px; height: 100%; background-color: grey; margin: 0 auto;"></div>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Admission</button>
+          </li>
+          <div style="width: 0px; height: 100%; background-color: grey; margin: 0 auto;"></div>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="home  active" data-page="home">
+
+        <header>
+          <h2 class="h2 article-title">Brain Train <BR> Institute</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+          
+            The Brain Train Institute in Kapan, Kathmandu, offers a wide range of academic services from primary school (Form 1) to advanced levels, including computer and bridge courses. They also conduct motivational classes, fostering personal and academic growth in a family-like atmosphere. With a focus on holistic development and a supportive community environment, the institute aims to inspire and empower students of all ages and backgrounds to excel in their educational journey.          </p>
+
+      
+        </section>
+
+        <BR>
+
+        <!--
+          - service
+        -->
+        <hr style="border-radius: 50%; border: 2px solid #ffea00; height: 2px; width: 50%; margin: 0 auto;">
+
+<br>
+        <section class="service">
+
+          <h3 class="h3 service-title">Facilities Overview:</h3>
+
+      
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Comprehensive Tuition Classes:</h4>
+                <p class="service-item-text">
+                  Brain Train Institute offers comprehensive tuition classes covering all grades and subjects, providing students with a complete academic support system.                </p>
+              </div>
+            </li>
+          
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Individual Attention:</h4>
+                <p class="service-item-text">
+                  Students receive personalized attention from experienced instructors at Brain Train Institute, ensuring that their specific learning needs are addressed effectively and comprehensively.                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <Br>
+        <hr style="border-radius: 50%; border: 2px solid #ffea00; height: 2px; width: 50%; margin: 0 auto;">
+
+
+          <div class="overlay" data-overlay></div>
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+            </button>
+          </section>
+
+      
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+          <h3 class="h3 clients-title">Why choose Us:</h3>
+          <ul class="clients-list has-scrollbar">
+            <div class="clients-features">
+              <p style="color: white;">1. Personalized Learning: Tailored education that respects individual needs and interests.</p>
+              <p style="color: white;">2. Holistic Development: Nurturing the mind, body, and spirit for well-rounded growth.</p>
+              <p style="color: white;">3. Engaging Environment: Stimulating spaces designed to inspire curiosity and exploration.</p>
+              <p style="color: white;">4. Experienced Guidance: Dedicated educators fostering a supportive learning community.</p>
+            </div>
+        </section>
+      </ul>
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="location" data-page="location">
+
+        <header>
+        <h2 class="h2 article-title">Location</h2>
+        </header>
+
+        <section>
+          <div style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14126.097613669763!2d85.3571042!3d27.731967!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bb93fe03d65%3A0x82a6e63f37ea7316!2sBrain%20Train%20Tuition%20Center!5e0!3m2!1sen!2snp!4v1707375789000!5m2!1sen!2snp" 
+                  width="100%" height="100%" style="position: absolute; top: 0; left: 0; border: 5px solid; border-color: black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+          </div>
+          <p style="text-align: center; margin-top: 10px; font-weight: bold; color: white;">
+              Address: Kapan, Kathmandu<br>
+              Phone: 9813096253, 976164653
+          </p>
+      </section>
+      
+
+      
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="notice" data-page="notice">
+        <header>
+          <h2 class="h2 article-title">Notice</h2>
+        </header>
+        <section class="projects">
+          <button class="filter-select" data-select onclick="displayImages()">Regrettably, notices are currently unavailable at the moment.</button>
+          <!-- Scrollable container for images -->
+          <div class="scroll-container" id="image-container"></div>
+        </section>
+      </article>
+
+
+
+      <!--
+        - #BLOG
+      -->
+      <article class="admission" data-page="admission">
+
+        <header>
+            <h2 class="h2 article-title">Admission</h2>
+        </header>
+    
+        <section>
+          <a href="add.html"  style="text-decoration: none; color: inherit;">
+            <div style="background-color: blue; color: white; text-align: center; padding: 10px; display: flex; align-items: center; justify-content: center;">
+              <button type="button" class="online-admission-btn" style="background: none; border: none; color: inherit;">
+                Apply for Online Admission. Click Here!
+              </button>
+              <img src="assets\images\form.png" alt="Image Description" style="max-width: 5%; height: auto; margin-left: 10px;">
+            </div>
+          </a>
+          
+          
+          <hr>
+
+      <BR>
+        
+          <div class="scrollable-container">
+            <section class="rules-regulations">
+              <div class="container">
+                <BR> <BR>
+                <h3 class="h3 rules-title">Rules and Regulations</h3>
+                    <BR>
+                      <p style="color: white;">
+                      Respect for Others: Students must treat peers, teachers, and staff with kindness, respect, and empathy at all times.
+                      Care for Materials: Students are responsible for handling Montessori materials with care, returning them to their designated places after use, and keeping the learning environment clean and orderly.<BR><BR>
+                      Participation: Students are encouraged to actively engage in classroom activities, follow instructions from teachers, and contribute positively to group discussions and collaborative projects.<BR><BR>
+                      Safety First: Students must adhere to safety guidelines and rules to ensure their own well-being and that of their classmates, refraining from behaviors that could cause harm or disruption.<BR><BR>
+                      Attendance and Punctuality: Regular attendance and punctuality are essential for effective learning and classroom dynamics. Students should arrive on time and attend classes regularly, with parents notifying the school in case of absences.<BR><BR>
+                    </p>
+              </div>
+            </section>
+          </div>
+  </section>
+
+    </article>
+    
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+  
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+      
+          <form action="mailto:braintrainmontessori@gmail.com" method="post" class="form" data-form>
+      
+              <div class="input-wrapper">
+                  <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+      
+                  <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              </div>
+      
+              <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+      
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                  <ion-icon name="paper-plane"></ion-icon>
+                  <span>Send Message</span>
+              </button>
+      
+          </form>
+      
+      </section>
+      
+
+      </article>
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+</body>
+
+</html>
