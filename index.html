@@ -12,6 +12,8 @@
   -->
   <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
   <!--
     - custom css link
   -->
@@ -366,20 +368,45 @@ body {
         </header>
     
         <section>
-          <a href="add.html"  style="text-decoration: none; color: inherit;">
+       
+          <a href="#" id="admissionLink" style="text-decoration: none; color: inherit;">
             <div style="background-color: blue; color: white; text-align: center; padding: 10px; display: flex; align-items: center; justify-content: center;">
-              <button type="button" class="online-admission-btn" style="background: none; border: none; color: inherit;">
-                Apply for Online Admission. Click Here!
-              </button>
-              <img src="assets\images\form.png" alt="Image Description" style="max-width: 5%; height: auto; margin-left: 10px;">
+                <button type="button" class="online-admission-btn" style="background: none; border: none; color: inherit;" onclick="checkInternetAndNavigate()">
+                    Apply for Online Admission. Click Here!
+                </button>
+                <img src="assets\images\form.png" alt="Image Description" style="max-width: 5%; height: auto; margin-left: 10px;">
             </div>
-          </a>
+        </a>
+        
+        <!-- Include Toastify JS (for displaying toast notifications) -->
+        <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        
+        <script>
+            function checkInternetAndNavigate() {
+                // Check internet connectivity
+                if (navigator.onLine) {
+                    // If online, navigate to add.html
+                    window.location.href = 'add.html';
+                } else {
+                    // If offline, show a toast message
+                    Toastify({
+                        text: 'Please check your internet connection and try again.',
+                        duration: 3000, // Display for 3 seconds
+                        gravity: 'top', // Display at the top of the screen
+                        position: 'center', // Center align horizontally
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Semi-transparent background color
+                    }).showToast();
+                }
+            }
+        </script>
+        
+
           
           
           <hr>
 
       <BR>
-        
+         
           <div class="scrollable-container">
             <section class="rules-regulations">
               <div class="container">
