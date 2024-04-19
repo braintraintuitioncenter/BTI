@@ -25,49 +25,48 @@
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsla(277, 87%, 12%, 0.853);
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    hsla(240, 89%, 22%, 0.514) 0%, 
+    hsla(240, 89%, 25%, 0.737) 100%
+  ), hsl(240, 91%, 33%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    hsl(13, 89%, 42%) 0%, 
+    hsla(0, 0%, 100%, 0.867) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    hsla(246, 91%, 41%, 0.727) 0%, 
+    hsla(0, 90%, 51%, 0.896) 59.86%
+  ), hsl(240, 78%, 45%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    hsl(248, 92%, 46%) 0%, 
+    hsla(243, 84%, 34%, 0) 50%
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsla(0, 0%, 100%, 0.338), 
+    hsla(0, 0%, 100%, 0.359)
   );
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
+  --jet: hsl(255, 84%, 27%);
+  --onyx: hsla(250, 94%, 25%, 0.633);
+  --eerie-black-1: hsla(247, 100%, 50%, 0.296);
+  --eerie-black-2: hsl(247, 63%, 49%);
+  --smoky-black: hsla(277, 87%, 12%, 0.853);
   --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --white-2: hsl(0, 0%, 100%);
+  --orange-yellow-crayola: hsl(181, 100%, 50%);
+  --vegas-gold: hsl(0, 100%, 50%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --bittersweet-shimmer: hsl(0, 0%, 100%);
 
   /**
    * typography
@@ -96,11 +95,11 @@
    * shadow
    */
   
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: -4px 8px 24px hsla(0, 4%, 54%, 0.25);
+  --shadow-2: -4px 8px 24px hsla(0, 4%, 54%, 0.25);
+  --shadow-3: -4px 8px 24px hsla(0, 4%, 54%, 0.25);
+  --shadow-4: -4px 8px 24px hsla(0, 4%, 54%, 0.25);
+  --shadow-5: -4px 8px 24px hsla(0, 4%, 54%, 0.25);
 
   /**
    * transition
@@ -167,7 +166,7 @@ body { background: var(--smoky-black); }
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
+  background: var(--smoky-black);
   border: 1px solid var(--jet);
   border-radius: 20px;
   padding: 15px;
